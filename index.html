@@ -3,154 +3,92 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Keshtv News | Latest News</title>
+<title>KESHTV NEWS | Your Voice. Your News. Your World.</title>
 <style>
-* {
-  box-sizing: border-box;
-}
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f4f4f4;
-  color: #222;
-}
-header {
-  background: #111;
-  color: white;
-  padding: 22px 15px;
-  text-align: center;
-}
-header h1 {
-  margin: 0;
-  font-size: 32px;
-}
-header span {
-  color: #e31b23;
-}
-header p {
-  margin-bottom: 0;
-}
-nav {
-  background: #d71920;
-  padding: 13px;
-  text-align: center;
-}
-nav a {
-  color: white;
-  text-decoration: none;
-  margin: 0 10px;
-  font-weight: bold;
-}
-.breaking {
-  background: #fff;
-  padding: 12px;
-  border-bottom: 2px solid #d71920;
-}
-.breaking strong {
-  color: #d71920;
-}
-.container {
-  max-width: 1000px;
-  margin: auto;
-  padding: 20px;
-}
-.featured {
-  background: white;
-  padding: 25px;
-  border-radius: 8px;
-  margin-bottom: 20px;
-}
-.featured h2 {
-  color: #d71920;
-}
-.news-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  gap: 18px;
-}
-.card {
-  background: white;
-  padding: 18px;
-  border-radius: 8px;
-  border-top: 4px solid #d71920;
-}
-.card h3 {
-  margin-top: 0;
-}
-.label {
-  color: #d71920;
-  font-size: 12px;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-footer {
-  background: #111;
-  color: white;
-  text-align: center;
-  padding: 25px;
-  margin-top: 30px;
-}
-@media (max-width: 500px) {
-  nav a {
-    display: inline-block;
-    margin: 7px;
-  }
-  header h1 {
-    font-size: 27px;
-  }
-}
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:#f4f4f4;color:#222}
+header{background:#111;color:white;padding:24px 12px;text-align:center;border-bottom:5px solid #e50914}
+header h1{margin:0;font-size:32px;letter-spacing:2px}
+header h1 span,footer span{color:#e50914}
+header p{font-size:13px;letter-spacing:1px;margin-bottom:0}
+nav{background:#222;padding:14px;text-align:center}
+nav a{color:white;text-decoration:none;margin:7px;font-size:12px;font-weight:bold}
+.breaking{background:#e50914;color:white;padding:12px;text-align:center;font-weight:bold}
+.hero{background:#171717;color:white;text-align:center;padding:42px 15px}
+.hero h2{font-size:28px;margin-top:0}
+.hero p{color:#ddd;line-height:1.6}
+.search{padding:20px;text-align:center;background:white}
+.search input{width:95%;max-width:500px;padding:13px;border:1px solid #ccc;border-radius:5px;font-size:15px}
+.container{max-width:1000px;margin:auto;padding:22px 15px}
+.container h2{border-left:5px solid #e50914;padding-left:12px}
+.categories{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.card{background:white;padding:22px 17px;border-radius:7px;box-shadow:0 2px 8px #ddd;border-bottom:3px solid #e50914}
+.card h3{color:#c9000b;margin-top:0}
+.card p{font-size:14px;line-height:1.6;color:#555}
+.card a{display:inline-block;background:#e50914;color:white;padding:10px 13px;text-decoration:none;border-radius:4px;font-size:13px}
+footer{background:#111;color:white;text-align:center;padding:25px 12px;margin-top:25px}
 </style>
 </head>
 <body>
 <header>
-  <h1>KESH<span>TV</span> NEWS</h1>
-  <p>Your Voice. Your News. Your World.</p>
+<h1>KESH<span>TV</span> NEWS</h1>
+<p>YOUR VOICE. YOUR NEWS. YOUR WORLD.</p>
 </header>
 <nav>
-  <a href="#home">Home</a>
-  <a href="#politics">Politics</a>
-  <a href="#business">Business</a>
-  <a href="#entertainment">Entertainment</a>
-  <a href="#sports">Sports</a>
+<a href="#home">HOME</a>
+<a href="#categories">NEWS CATEGORIES</a>
+<a href="#about">ABOUT US</a>
 </nav>
-<div class="breaking">
-  <strong>NEWS UPDATE:</strong>
-  Welcome to Keshtv News — your destination for news and current affairs.
+<div class="breaking">📰 KESHTV NEWS — STAY INFORMED, STAY AHEAD</div>
+<section class="hero" id="home">
+<h2>Your World. Your News.</h2>
+<p>Bringing you the latest stories, important updates and developments that matter to you.</p>
+</section>
+<div class="search">
+<input type="search" id="search" placeholder="Search news categories..." oninput="filterNews()">
 </div>
-<main class="container" id="home">
-  <section class="featured">
-    <span class="label">Welcome to Keshtv News</span>
-    <h2>Stay Informed. Stay Ahead.</h2>
-    <p>Get the latest headlines, breaking news, politics, business, entertainment and sports updates from Nigeria and around the world.</p>
-  </section>
-  <h2>Explore Our News Categories</h2>
-  <div class="news-grid">
-<article class="card" id="politics">
-  <span class="label">Politics</span>
-  <h3>Politics & Governance</h3>
-  <p>Follow political developments, government policies and important national issues.</p>
-</article>
-<article class="card" id="business">
-  <span class="label">Business</span>
-  <h3>Business & Economy</h3>
-  <p>Discover business news, market trends and economic developments.</p>
-</article>
-<article class="card" id="entertainment">
-  <span class="label">Entertainment</span>
-  <h3>Entertainment & Lifestyle</h3>
-  <p>Stay updated on celebrities, music, movies and trending stories.</p>
-</article>
-<article class="card" id="sports">
-  <span class="label">Sports</span>
-  <h3>Sports Updates</h3>
-  <p>Catch up on football, sports news, match results and sporting events.</p>
-</article>
-  </div>
+<main class="container" id="categories">
+<h2>Explore Our News Categories</h2>
+<div class="categories">
+<div class="card">
+<h3>🏛️ Politics &amp; Governance</h3>
+<p>Political developments, government policies, elections and public affairs.</p>
+<a href="#politics">Explore Politics</a>
+</div>
+<div class="card">
+<h3>💼 Business &amp; Economy</h3>
+<p>Business news, entrepreneurship, finance, markets and economic updates.</p>
+<a href="#business">Explore Business</a>
+</div>
+<div class="card">
+<h3>🎬 Entertainment &amp; Lifestyle</h3>
+<p>Celebrity news, trending stories, lifestyle features and entertainment updates.</p>
+<a href="#entertainment">Explore Entertainment</a>
+</div>
+<div class="card">
+<h3>⚽ Sports Updates</h3>
+<p>Sports headlines, match results, player highlights and competitions.</p>
+<a href="#sports">Explore Sports</a>
+</div>
+</div>
 </main>
+<section class="container" id="about">
+<h2>About KESHTV NEWS</h2>
+<p>Keshtv News brings readers stories and updates across politics, business, entertainment and sports.</p>
+<p><strong>Your Voice. Your News. Your World.</strong></p>
+</section>
 <footer>
-  <h3>KESHTV NEWS</h3>
-  <p>Your Voice. Your News. Your World.</p>
-  <p>&copy; 2026 Keshtv News. All rights reserved.</p>
+<h3>KESH<span>TV</span> NEWS</h3>
+<p>Your Voice. Your News. Your World.</p>
+<p>&copy; 2026 Keshtv News. All rights reserved.</p>
 </footer>
+<script>
+function filterNews(){
+const term=document.getElementById('search').value.toLowerCase();
+document.querySelectorAll('.card').forEach(card=>{
+card.style.display=card.innerText.toLowerCase().includes(term)?'block':'none';
+});
+}
+</script>
 </body>
 </html>
